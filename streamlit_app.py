@@ -1,1 +1,3 @@
-created the main pyhton app
+Import streamlit
+
+streamlit.title("My Parents New Healthy Diner")
