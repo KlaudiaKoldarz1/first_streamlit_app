@@ -17,7 +17,7 @@ st.dataframe(fruits_to_show)
 
 st.header('Fruityvice Fruit Advice!')
 fruit_choice = st.text_imput('What friut would you like information aobut?', 'Kiwi')
-st.write.('The user entered', fruit_choice)
+st.write('The user entered', fruit_choice)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "watermelon")
 
 #st.text(fruityvice_response.json())
