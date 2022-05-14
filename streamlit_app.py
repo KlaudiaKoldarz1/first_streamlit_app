@@ -23,4 +23,4 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "waterm
 #st.text(fruityvice_response.json())
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 st.dataframe(fruityvice_normalized)
-import snowflake.connector
+#import snowflake.connector
