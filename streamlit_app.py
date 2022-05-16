@@ -29,7 +29,7 @@ try :
     st.error("Please select friut information.")
   else:
     back_from_function = get_fruityadvice_data(tfruit_choice)
-    st.dataframe(back_from_function )
+    st.dataframe(back_from_function)
 except URLError as e:
   st.Error()
 #st.text(fruityvice_response.json())
