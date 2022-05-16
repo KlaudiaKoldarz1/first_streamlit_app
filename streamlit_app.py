@@ -34,10 +34,6 @@ except URLError as e:
   st.Error()
 #st.text(fruityvice_response.json())
 
-#st.stop()
-
- 
-
 
 st.header("The friut list contains:")
 def get_fruit_load_list():
@@ -50,6 +46,7 @@ if st.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     st.dataframe(my_data_rows)
 
+#st.stop()
 
 fruit_choice1 = st.text_input('What friut would you like to add?', 'Kiwi')
 st.write('Thank you for adding: ', fruit_choice1)
