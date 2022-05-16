@@ -30,3 +30,7 @@ my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 st.header("The friut list contains:")
 st.dataframe(my_data_rows)
+
+
+fruit_choice1 = st.text_input('What friut would you like to add?', 'Kiwi')
+st.write('Thank you for adding: ', fruit_choice1)
