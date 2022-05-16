@@ -41,14 +41,15 @@ def get_fruit_load_list():
         my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
         return  my_cur.fetchall()
 
-if st.button('Get Fruit Load List'):
+if st.button('Get Fruit List'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     my_data_rows = get_fruit_load_list()
+    my_cnx.close()
     st.dataframe(my_data_rows)
 
 def insert_row_sf(new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.Execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('')")
+        my_cur.Execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('" +  new_fruit + "')")
         return  "Thanks for adding " + new_fruit
     
 add_my_friut = st.text_input('What friut would you like to add?', 'Kiwi')
