@@ -49,7 +49,7 @@ if st.button('Get Fruit List'):
 
 def insert_row_sf(new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.Execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('" +  new_fruit + "')")
+        my_cur.Execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('kiwi')")
         return  "Thanks for adding " + new_fruit
     
 add_my_friut = st.text_input('What friut would you like to add?', 'Kiwi')
